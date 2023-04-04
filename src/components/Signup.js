@@ -8,7 +8,7 @@ export default function Signup() {
     const emailRef = useRef()
     const passwordRef = useRef()
     const passwordConfirmRef = useRef()
-    const { signup, currentUser } = useAuth() // this is the signup function that is passed to the context object
+    const { signup } = useAuth() // this is the signup function that is passed to the context object
     const [error, setError] = useState('') // this is the error message that is displayed if there is an error
     const [loading, setLoading] = useState(false) // this is used to disable the button when the form is submitted
 
@@ -36,7 +36,7 @@ export default function Signup() {
             <Card>
                 <Card.Body>
                     <h2 className="text-center mb-4">Sign Up</h2>
-                    {currentUser && currentUser.email}
+                    {/* {currentUser && currentUser.email} */}
                     {error && <Alert variant="danger">{error}</Alert>}
                     <Form onSubmit={handleSubmit}>
                         <Form.Group id="email" className="mb-4">
