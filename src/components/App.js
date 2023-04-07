@@ -4,7 +4,7 @@ import { AuthProvider } from '../contexts/AuthContext';
 import Signup from './Signup';
 import Login from './Login';
 import Dashboard from './Dashboard';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -12,12 +12,12 @@ function App() {
       <div className='w-100' style={{ maxWidth: "400px" }} >
         <Router>
           <AuthProvider>
-            <Switch>
+            <Routes>
               <Route exact path="/" component={Dashboard} />
               <Route path="/signup" component={Signup} />
               <Route path="/login" component={Login} />
               {/* <Route path="/forgot-password" component={ForgotPassword} /> */}
-            </Switch>
+            </Routes>
             <Signup />
           </AuthProvider>
         </Router>
