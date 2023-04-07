@@ -13,12 +13,11 @@ function App() {
         <Router>
           <AuthProvider>
             <Routes>
-              <Route exact path="/" component={Dashboard} />
-              <Route path="/signup" component={Signup} />
-              <Route path="/login" component={Login} />
+              <Route path="/" element={<Dashboard />} exact />
+              <Route path="/signup" element={<Signup />} />
+              <Route path="/login" element={<Login />} />
               {/* <Route path="/forgot-password" component={ForgotPassword} /> */}
             </Routes>
-            <Signup />
           </AuthProvider>
         </Router>
 
